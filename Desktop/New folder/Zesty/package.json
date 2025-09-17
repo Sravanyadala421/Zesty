@@ -1,0 +1,22 @@
+{
+  "name": "zesty",
+  "version": "1.0.0",
+  "description": "Zesty - Cultural Discovery Platform",
+  "private": true,
+  "scripts": {
+    "dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "server": "cd server && npm start",
+    "server:dev": "cd server && npm run dev",
+    "dev:full": "concurrently \"npm run dev\" \"npm run server:dev\"",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "clean": "rm -rf client/node_modules server/node_modules node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ]
+} 
